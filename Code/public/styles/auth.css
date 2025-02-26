@@ -1,0 +1,48 @@
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group input.error {
+    border-color: #dc3545;
+}
+
+button[type="submit"]:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.password-strength {
+    height: 4px;
+    margin-top: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.password-strength.weak { background: #dc3545; width: 33%; }
+.password-strength.medium { background: #ffc107; width: 66%; }
+.password-strength.strong { background: #28a745; width: 100%; }
+
+@keyframes loading {
+    to { transform: rotate(360deg); }
+}
+
+button[type="submit"]:disabled::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loading 1s linear infinite;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Academic Communication System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .error-banner {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c00;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            display: none;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-banner">
+            <img src="assets/university-logo.png" alt="University Logo">
+            <h1>Join Our Academic Community</h1>
+            <p>Create an account to get started</p>
+        </div>
+        <div class="login-form">
+            <h2>Register</h2>
+            <div id="serverError" class="error-banner"></div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required minlength="3" maxlength="30">
+                    <span class="error-message" id="username-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                    <div class="password-strength"></div>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+                <button type="submit" id="submitButton">Register</button>
+                <div id="form-error" class="error-message"></div>
+            </form>
+            <div class="login-footer">
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/register.js"></script>
+</body>
+</html>

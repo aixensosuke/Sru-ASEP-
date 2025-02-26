@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials - AcadComm</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/documents.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Include sidebar -->
+        <main class="content">
+            <div class="documents-header">
+                <h1>Study Materials</h1>
+                <button class="upload-btn" id="uploadBtn">
+                    <i class="fas fa-upload"></i> Upload Material
+                </button>
+            </div>
+
+            <div class="materials-grid">
+                <div class="filters">
+                    <select id="subjectFilter">
+                        <option value="">All Subjects</option>
+                        <!-- Subjects will be loaded dynamically -->
+                    </select>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="notes">Notes</option>
+                        <option value="papers">Past Papers</option>
+                        <option value="assignments">Assignments</option>
+                    </select>
+                </div>
+
+                <div id="materialsList" class="materials-list">
+                    <!-- Materials will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Upload Modal -->
+            <div id="uploadModal" class="modal">
+                <div class="modal-content">
+                    <h2>Upload Study Material</h2>
+                    <form id="uploadForm">
+                        <input type="text" placeholder="Title" required>
+                        <select name="subject" required>
+                            <option value="">Select Subject</option>
+                        </select>
+                        <select name="type" required>
+                            <option value="">Select Type</option>
+                            <option value="notes">Notes</option>
+                            <option value="papers">Past Papers</option>
+                            <option value="assignments">Assignments</option>
+                        </select>
+                        <textarea placeholder="Description" required></textarea>
+                        <input type="file" required>
+                        <button type="submit">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/documents.js"></script>
+</body>
+</html>

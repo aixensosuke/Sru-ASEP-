@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiteboard - AcadComm</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/whiteboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/chatbot.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Include the same sidebar as index.html -->
+        <main class="content">
+            <div class="whiteboard-container">
+                <div class="toolbar">
+                    <div class="tool-group">
+                        <button class="tool" data-tool="pen"><i class="fas fa-pen"></i></button>
+                        <button class="tool" data-tool="eraser"><i class="fas fa-eraser"></i></button>
+                        <input type="color" id="colorPicker" value="#000000">
+                        <input type="range" id="brushSize" min="1" max="20" value="2">
+                    </div>
+                    <div class="action-group">
+                        <button id="clearBoard"><i class="fas fa-trash"></i> Clear</button>
+                        <button id="saveBoard"><i class="fas fa-save"></i> Save</button>
+                        <button id="shareBoard"><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+                <canvas id="whiteboard"></canvas>
+            </div>
+        </main>
+    </div>
+    <script src="../js/api.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/whiteboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new Whiteboard();
+            new Chatbot();
+        });
+    </script>
+</body>
+</html>

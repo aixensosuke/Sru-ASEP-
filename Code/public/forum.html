@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt Forum - Academic Communication System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Include existing sidebar navigation -->
+        <main class="content">
+            <div class="forum-header">
+                <h1>Academic Doubt Forum</h1>
+                <button id="askQuestionBtn" class="primary-button">
+                    <i class="fas fa-plus"></i> Ask Question
+                </button>
+            </div>
+
+            <div class="forum-filters">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search questions...">
+                </div>
+            </div>
+
+            <div class="questions-list" id="questionsList">
+                <!-- Questions will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Question Form Modal -->
+    <div id="questionModal" class="modal">
+        <div class="modal-content">
+            <h2>Ask a Question</h2>
+            <form id="questionForm">
+                <div class="form-group">
+                    <label for="questionTitle">Title</label>
+                    <input type="text" id="questionTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="questionCategory">Category</label>
+                    <select id="questionCategory" required>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="questionContent">Description</label>
+                    <textarea id="questionContent" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="questionAttachment">Attachments (optional)</label>
+                    <input type="file" id="questionAttachment">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="secondary-button" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="primary-button">Submit Question</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="forum.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AnimationManager.initPageTransitions();
+            AnimationManager.initScrollAnimations();
+            AnimationManager.initImageLazyLoading();
+            Navigation.init();
+        });
+    </script>
+</body>
+</html>

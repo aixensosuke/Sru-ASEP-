@@ -1,0 +1,108 @@
+.whiteboard-container {
+    background: #f8f9fa;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tool-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.tool {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    background: #f8f9fa;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tool:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.tool.active {
+    background: #4CAF50;
+    color: white;
+}
+
+#colorPicker {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+}
+
+#brushSize {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    accent-color: #4CAF50;
+}
+
+.action-group {
+    display: flex;
+    gap: 15px;
+}
+
+.action-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+#clearBoard {
+    background: #ff4444;
+    color: white;
+}
+
+#saveBoard {
+    background: #4CAF50;
+    color: white;
+}
+
+#shareBoard {
+    background: #2196F3;
+    color: white;
+}
+
+.action-group button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#whiteboard {
+    flex: 1;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    cursor: crosshair;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Communication System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/chatbot.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <div class="logo">AcadComm</div>
+            <ul class="nav-links">
+                <li><a href="pages/dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                <li><a href="pages/messages.html"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="pages/calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+                <li><a href="pages/documents.html"><i class="fas fa-file"></i> Study material</a></li>
+                <li><a href="pages/whiteboard.html"><i class="fas fa-chalkboard"></i> Whiteboard</a></li>
+                <li><a href="forum.html"><i class="fas fa-question-circle"></i> Doubt Forum</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-profile">
+                    <span class="notifications"><i class="fas fa-bell"></i></span>
+                    <div class="user-menu">
+                        <img src="avatar.png" alt="User" class="avatar">
+                        <div class="user-dropdown">
+                            <a href="login.html" id="loginLink">Login</a>
+                            <a href="#" id="logoutLink" style="display: none;">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="hero-section">
+                <div class="hero-slider">
+                    <div class="slide active">
+                        <img src="assets/images/campus-main.jpg" alt="Campus">
+                        <div class="slide-content">
+                            <h1>Welcome to Academic Hub</h1>
+                            <p>Connecting Minds, Advancing Knowledge</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="assets/images/library.jpg" alt="Library">
+                        <div class="slide-content">
+                            <h1>Research Excellence</h1>
+                            <p>Access World-Class Resources</p>
+                        </div>
+                    </div>
+                    <div class="slide-controls">
+                        <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <div class="feature-card">
+                    <img src="assets/images/collaboration.jpg" alt="Collaboration">
+                    <h3>Collaborate</h3>
+                    <p>Work together with peers and faculty members</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/images/research.jpg" alt="Research">
+                    <h3>Research</h3>
+                    <p>Access latest research materials and publications</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/images/communication.jpg" alt="Communication">
+                    <h3>Communicate</h3>
+                    <p>Stay connected with instant messaging and updates</p>
+                </div>
+            </div>
+
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h4>5000+</h4>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book"></i>
+                    <h4>10000+</h4>
+                    <p>Resources</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>95%</h4>
+                    <p>Success Rate</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card upcoming-events">
+                    <h3>Upcoming Events</h3>
+                    <div id="events-list"></div>
+                </div>
+                <div class="card recent-messages">
+                    <h3>Recent Messages</h3>
+                    <div id="messages-list"></div>
+                </div>
+                <div class="card quick-stats">
+                    <h3>Quick Stats</h3>
+                    <div id="stats-container"></div>
+                </div>
+                <div class="card announcements">
+                    <h3>Announcements</h3>
+                    <div id="announcements-list"></div>
+                </div>
+            </div>
+
+            <div class="news-section">
+                <h2>Latest Updates</h2>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <img src="assets/images/news1.jpg" alt="News 1">
+                        <div class="news-content">
+                            <h3>New Research Partnership</h3>
+                            <p>Exciting collaboration with leading institutions...</p>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="resources-section">
+                <h2>Quick Resources</h2>
+                <div class="resources-grid">
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Digital Library</span>
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Schedule Planner</span>
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-laptop-code"></i>
+                        <span>Online Courses</span>
+                    </a>
+                    <a href="#" class="resource-link">
+                        <i class="fas fa-handshake"></i>
+                        <span>Career Services</span>
+                    </a>
+                </div>
+            </div>
+
+            <footer class="dashboard-footer">
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Help</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <p>&copy; 2024 Academic Communication System</p>
+            </footer>
+        </main>
+    </div>
+    <script src="app.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AnimationManager.initPageTransitions();
+            AnimationManager.initScrollAnimations();
+            AnimationManager.initImageLazyLoading();
+            Navigation.init();
+            new Chatbot(); // Initialize chatbot
+        });
+    </script>
+</body>
+</html>
